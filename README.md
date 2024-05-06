@@ -24,19 +24,25 @@ To install and run the Data Potluck Mock Service, follow these steps:
    cd data-potluck-mock-service
    ```
 
-3. Install the pnpm globally:
+3. Switch to node version specified in .nvmrc file:
+
+   ```bash
+   nvm use
+   ```
+
+4. Install the pnpm globally:
 
    ```bash
    npm install -g pnpm
    ```
 
-4. Install the dependencies using pnpm:
+5. Install the dependencies using pnpm:
 
    ```bash
    pnpm install
    ```
 
-5. Start the application:
+6. Start the application:
 
    ```bash
    pnpm run dev
