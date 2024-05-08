@@ -1,18 +1,29 @@
 import { Request, Response, NextFunction } from 'express';
 import { z, ZodError } from 'zod';
-
 import { StatusCodes } from 'http-status-codes';
 
-export function validateData(schema: z.ZodObject<any, any>) {
-  return (req: Request, res: Response, next: NextFunction) => {
+/**
+ * Middleware function to validate request data against a given schema.
+ * @param {z.ZodObject<any, any>} schema - The schema to validate against.
+ * @returns {import('express').RequestHandler} - The middleware function.
+ */
+
+export function validateData(
+  schema: z.ZodObject<any, any>
+): import('express').RequestHandler {
+  /**
+   * Middleware function to validate request data.
+   * @param {Request} req - The request object.
+   * @param {Response} res - The response object.
+   * @param {NextFunction} next - The next middleware function.
+   */
+  return function (req: Request, res: Response, next: NextFunction) {
     try {
-      // TODO: Add body when any payload
       const allParams = {
         ...req.params,
         ...req.query,
       };
       schema.parse(allParams);
-
       next();
     } catch (error) {
       if (error instanceof ZodError) {
