@@ -1,0 +1,62 @@
+[
+  {
+    "serviceKey": 10022,
+    "timestamp": 1648585426105,
+    "serviceDescription": "ASU Google Workspace for Education",
+    "servicePath": "GMAIL",
+    "status": "A",
+    "statusDescr": "Active",
+    "serviceType": 38,
+    "serviceTypeDescr": "Google Mail",
+    "serviceCategory": 0,
+    "serviceCategoryDescr": "Basic Services"
+  },
+  {
+    "serviceKey": 10098,
+    "timestamp": 1646471412243,
+    "serviceDescription": "ASU Primary Login (Kerberos5)",
+    "servicePath": "KERBEROS",
+    "status": "A",
+    "statusDescr": "Active",
+    "serviceType": 11,
+    "serviceTypeDescr": "Kerberos",
+    "serviceCategory": 0,
+    "serviceCategoryDescr": "Basic Services"
+  },
+  {
+    "serviceKey": 14808,
+    "timestamp": 1624015053527,
+    "serviceDescription": "CAS SSO MFA User Challenge - Invited",
+    "servicePath": "KERBEROS.MFA-challenge.invited",
+    "status": "A",
+    "statusDescr": "Active",
+    "serviceType": 88,
+    "serviceTypeDescr": "Dynamo MFA User",
+    "serviceCategory": 0,
+    "serviceCategoryDescr": "Application Services"
+  },
+  {
+    "serviceKey": 12926,
+    "timestamp": 1627387809608,
+    "serviceDescription": "CAS SSO MFA User Challenge - Required",
+    "servicePath": "KERBEROS.MFA-challenge.required",
+    "status": "A",
+    "statusDescr": "Active",
+    "serviceType": 88,
+    "serviceTypeDescr": "Dynamo MFA User",
+    "serviceCategory": 0,
+    "serviceCategoryDescr": "Application Services"
+  },
+  {
+    "serviceKey": 9000,
+    "timestamp": 1623997993397,
+    "serviceDescription": "AD Kerberos Realm ",
+    "servicePath": "KERBEROS_AD",
+    "status": "A",
+    "statusDescr": "Active",
+    "serviceType": 84,
+    "serviceTypeDescr": "AD Kerberos User",
+    "serviceCategory": 0,
+    "serviceCategoryDescr": "Basic Services"
+  }
+]

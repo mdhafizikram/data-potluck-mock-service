@@ -1,0 +1,15 @@
+{
+  "realm": "asuriteid",
+  "principal": "jsharper",
+  "timestamp": 1586898431898,
+  "principalType": "primary",
+  "uid": "36258",
+  "status": {
+    "active": true
+  },
+  "owner": {
+    "emplid": "1000422805"
+  },
+  "sponsors": [],
+  "electronicIdentityKey": "51971"
+}

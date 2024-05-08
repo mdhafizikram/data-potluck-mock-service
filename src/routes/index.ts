@@ -1,6 +1,6 @@
 import express, { Router } from 'express';
-import { doHttp } from './api/httpMethods';
-import { doMock } from './api/mockMethods';
+import { dplService } from './data-potluck';
+import { mockService } from './mocks';
 import { validateData } from '../middleware/requestValidation';
 import {
   classSubjectSchema,
@@ -14,6 +14,19 @@ import {
   courseCatalogNumberSchema,
   courseOwnerSchema,
   privateMockSchema,
+  codesetDegreeSchema,
+  codesetCampusSchema,
+  codesetCreditSchema,
+  codesetCreditCodeSchema,
+  codesetCountriesSchema,
+  codesetCountrySchema,
+  privateReportSchema,
+  privateEnrollmentSchema,
+  privatePersonSchema,
+  privatePersonIdSchema,
+  privatePrincipalSchema,
+  privatePrincipalOwnerSchema,
+  privateServiceSchema,
 } from '../schemas/userSchemas';
 
 const router: Router = express.Router();
@@ -22,41 +35,111 @@ const router: Router = express.Router();
 router.get(
   '/api/course/:strm/:courseId/:courseOfferNumber',
   validateData(courseSchema),
-  doHttp
+  dplService
 );
 router.get(
   '/api/course/:strm/:courseId',
   validateData(courseByCourseIdSchema),
-  doHttp
+  dplService
 );
 router.get(
   '/api/course/:strm/subject/:subject',
   validateData(courseCatalogRangeSchema),
-  doHttp
+  dplService
 );
 router.get(
   '/api/course/:strm/subject/:subject/:catalogNumber',
   validateData(courseCatalogNumberSchema),
-  doHttp
+  dplService
 );
-router.get('/api/course/:strm', validateData(courseOwnerSchema), doHttp);
+router.get('/api/course/:strm', validateData(courseOwnerSchema), dplService);
 
 // @HttpGetClass
-router.get('/api/class', validateData(multiClassSchema), doHttp);
-router.get('/api/class/:strm', validateData(classListSchema), doHttp);
+router.get('/api/class', validateData(multiClassSchema), dplService);
+router.get('/api/class/:strm', validateData(classListSchema), dplService);
 router.get(
   '/api/class/:strm/subject/:subject/:catalogNumber',
   validateData(classSubjectSchema),
-  doHttp
+  dplService
 );
-router.get('/api/class/:strm/:classNumber', validateData(classSchema), doHttp);
+router.get(
+  '/api/class/:strm/:classNumber',
+  validateData(classSchema),
+  dplService
+);
 router.get(
   '/api/class/:strm/subject/:subject',
   validateData(classCatalogRangeSchema),
-  doHttp
+  dplService
+);
+// @HttpGetCodesets
+router.get(
+  '/api/codeset/degrees',
+  validateData(codesetDegreeSchema),
+  dplService
+);
+router.get(
+  '/api/codeset/campus/{campusCode}',
+  validateData(codesetCampusSchema),
+  dplService
+);
+router.get('/api/codeset/campuses', dplService);
+router.get(
+  '/api/codeset/credit-by-exam',
+  validateData(codesetCreditSchema),
+  dplService
+);
+router.get(
+  '/api/codeset/credit-by-exam/{testCode}',
+  validateData(codesetCreditCodeSchema),
+  dplService
+);
+router.get(
+  '/api/codeset/countries',
+  validateData(codesetCountriesSchema),
+  dplService
+);
+router.get(
+  '/api/codeset/country/{countryCode}',
+  validateData(codesetCountrySchema),
+  dplService
 );
 
 // @samplePrivateRoute
-router.get('/private', validateData(privateMockSchema), doMock);
+router.get(
+  '/api/academic-status-report/emplid/{emplid}',
+  validateData(privateReportSchema),
+  mockService
+);
+router.get(
+  '/api/enrollment/class/{strm}/{classNumber}',
+  validateData(privateEnrollmentSchema),
+  mockService
+);
+router.get('/api/person', validateData(privatePersonSchema), mockService);
+router.get(
+  '/api/person/{emplid}',
+  validateData(privatePersonIdSchema),
+  mockService
+);
+
+router.get(
+  '/api/principal/asuriteid/{asuriteid}',
+  validateData(privatePrincipalSchema),
+  mockService
+);
+router.get(
+  '/api/principal/asuriteid/{asuriteid}?include=ownerDetail',
+  validateData(privatePrincipalOwnerSchema),
+  mockService
+);
+router.get(
+  '/api/service-subscription/asuriteid/{asuriteid}',
+  validateData(privateServiceSchema),
+  mockService
+);
+
+
+router.get('/private', validateData(privateMockSchema), mockService);
 
 export default router;

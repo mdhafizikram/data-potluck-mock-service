@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { readFile } from 'fs';
 
-export const doMock = async (req: Request, res: Response): Promise<void> => {
+export const mockService = async (req: Request, res: Response): Promise<void> => {
   const { JOURNEY } = req.query;
 
   try {

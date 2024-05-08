@@ -64,11 +64,57 @@ export const courseOwnerSchema = z.object({
   ownedByDepartment: z.string().optional(),
   include: z.string().optional(),
 });
-
+export const codesetDegreeSchema = z.object({
+  degreeCode : z.string().max(1).optional()
+})
+export const codesetCampusSchema = z.object({
+  campusCode : z.string()
+})
 // For all authenticated routes JOURNEY is required
 export const privateMockSchema = z.object({
   JOURNEY: z.string(),
 });
+export const codesetCreditSchema = z.object({
+  include : z.string().optional()
+});
+export const codesetCreditCodeSchema = z.object({
+  testCode: z.string().max(3),
+  include : z.string().optional()
+})
+export const codesetCountriesSchema = z.object({
+  include: z.string().optional(),
+  exclude : z.string().optional()
+});
+export const codesetCountrySchema = z.object({
+  countryCode: z.string()
+});
+export const privateReportSchema = z.object({
+
+  emplid: z.string()
+});
+export const privateEnrollmentSchema = z.object({
+  strm: z.string(),
+  classNumber: z.string()
+});
+export const privatePersonSchema = z.object({
+  emplid: z.string().optional()
+ 
+});
+export const privatePersonIdSchema = z.object({
+  emplid: z.string()
+});
+export const privatePrincipalSchema = z.object({
+  asuriteid: z.string()
+});
+export const privatePrincipalOwnerSchema = z.object({
+  asuriteid: z.string(),
+  include: z.string().optional()
+});
+export const privateServiceSchema = z.object({
+  asuriteid: z.string(),
+  filter: z.string().optional()
+})
+
 
 export const acadPlanSchema = z.object({
   ownedByCollege: z.string().optional(),

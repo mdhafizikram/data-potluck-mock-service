@@ -1,0 +1,44 @@
+[
+  {
+    "emplid": "2000012345",
+    "strm": "2241",
+    "classNumber": "12345",
+    "acadCareer": "UGRD",
+    "asrPeriodCode": "3",
+    "timestamp": 1714078187000,
+    "asrPeriodDescription": "Session C - January 22-28, 2024",
+    "grade": "E",
+    "gradeDescription": null,
+    "commentText": "missed many classes, incomplete assignments, low exam score",
+    "actions": [],
+    "reasons": []
+  },
+  {
+    "emplid": "2000012345",
+    "strm": "2241",
+    "classNumber": "12346",
+    "acadCareer": "UGRD",
+    "asrPeriodCode": "4",
+    "timestamp": 1714078287000,
+    "asrPeriodDescription": "Session C - January 29 - February 4, 2024",
+    "grade": "U",
+    "gradeDescription": "Unsatisfactory",
+    "commentText": null,
+    "actions": [
+      {
+        "gradeActionCode": "04",
+        "gradeActionDescription": "Complete assignments"
+      },
+      {
+        "gradeActionCode": "08",
+        "gradeActionDescription": "Contact instructor"
+      }
+    ],
+    "reasons": [
+      {
+        "gradeReasonCode": "03",
+        "gradeReasonDescription": "Missed assignments/assessments"
+      }
+    ]
+  }
+]

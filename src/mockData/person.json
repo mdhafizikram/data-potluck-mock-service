@@ -1,0 +1,26 @@
+{
+  "emplid": "1000422805",
+  "timestamp": 1676479695576,
+  "primaryAsuriteid": "jsharper",
+  "campusId": "993904776",
+  "sevisId": null,
+  "names": {
+    "PRF": {
+      "nameType": "PRF",
+      "givenName": "Jason",
+      "middleName": "The",
+      "familyName": "Testcase",
+      "namePrefix": null,
+      "nameSuffix": "Jr"
+    },
+    "PRI": {
+      "nameType": "PRI",
+      "givenName": "Jason",
+      "middleName": "Scott",
+      "familyName": "Harper",
+      "namePrefix": null,
+      "nameSuffix": null
+    }
+  },
+  "gender": "M"
+}

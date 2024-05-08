@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { makeApiRequest } from '../../services/axios.service';
 
-export const doHttp = async (req: Request, res: Response): Promise<void> => {
+export const dplService = async (req: Request, res: Response): Promise<void> => {
   const payload = {
     body: JSON.stringify(req.body),
     httpMethod: req.method,

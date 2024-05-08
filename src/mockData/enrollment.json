@@ -1,0 +1,168 @@
+{
+  "enrollments": [
+    {
+      "emplid": "1000123456",
+      "strm": "2231",
+      "classNumber": "12345",
+      "timestamp": 1667939535661,
+      "primaryAsuriteid": "ssundevil",
+      "courseId": "103769",
+      "courseOfferNumber": "1",
+      "sessionCode": "C",
+      "classSection": "1001",
+      "subject": "CHM",
+      "catalogNumber": "116",
+      "acadCareer": "UGRD",
+      "acadCareerDescription": "Undergraduate",
+      "enrollmentStatus": "E",
+      "enrollmentStatusReason": "ENRL",
+      "unitsTaken": 4.0,
+      "auditGradingBasis": false,
+      "enrollmentDropDate": null,
+      "officialGrade": null,
+      "gradePoints": 0.0,
+      "gradingBasis": "GNA",
+      "gradingBasisDescription": "Standard Grading",
+      "instructorChoiceEmplid": null,
+      "promodCohortCode": null,
+      "dropDeadlineDate": 1673766000000,
+      "withdrawalDeadlineDate": 1680418800000,
+      "completeSessionWithdrawalDeadlineDate": 1682665200000,
+      "studentDetail": {
+        "emplid": "1000123456",
+        "timestamp": 1631223050584,
+        "primaryAsuriteid": "ssundevil",
+        "campusId": "993123456",
+        "names": {
+          "PRF": {
+            "nameType": "PRF",
+            "givenName": "Sparky",
+            "middleName": "TheMascot",
+            "familyName": "Sundevil",
+            "namePrefix": null,
+            "nameSuffix": null
+          },
+          "PRI": {
+            "nameType": "PRI",
+            "givenName": "Sparkler",
+            "middleName": "TheMascot",
+            "familyName": "Sundevil",
+            "namePrefix": null,
+            "nameSuffix": null
+          }
+        },
+        "gender": "M"
+      }
+    },
+    {
+      "emplid": "1000234567",
+      "strm": "2231",
+      "classNumber": "12345",
+      "timestamp": 1673296207959,
+      "primaryAsuriteid": "asundevil",
+      "courseId": "103769",
+      "courseOfferNumber": "1",
+      "sessionCode": "C",
+      "classSection": "1001",
+      "subject": "CHM",
+      "catalogNumber": "116",
+      "acadCareer": "UGRD",
+      "acadCareerDescription": "Undergraduate",
+      "enrollmentStatus": "D",
+      "enrollmentStatusReason": "DROP",
+      "unitsTaken": 4.0,
+      "auditGradingBasis": false,
+      "enrollmentDropDate": 1673247600000,
+      "officialGrade": null,
+      "gradePoints": 0.0,
+      "gradingBasis": "GNA",
+      "gradingBasisDescription": "Standard Grading",
+      "instructorChoiceEmplid": null,
+      "promodCohortCode": null,
+      "dropDeadlineDate": 1673766000000,
+      "withdrawalDeadlineDate": 1680418800000,
+      "completeSessionWithdrawalDeadlineDate": 1682665200000,
+      "studentDetail": {
+        "emplid": "1000234567",
+        "timestamp": 1609902827585,
+        "primaryAsuriteid": "ahsundev",
+        "campusId": "993234567",
+        "names": {
+          "PRI": {
+            "nameType": "PRI",
+            "givenName": "Another",
+            "middleName": "Happy",
+            "familyName": "Sundevil",
+            "namePrefix": null,
+            "nameSuffix": null
+          }
+        },
+        "gender": "F"
+      }
+    }
+  ],
+  "classDetail": {
+    "strm": "2231",
+    "classNumber": "12345",
+    "courseId": "103769",
+    "courseOfferNumber": "1",
+    "sessionCode": "C",
+    "classSection": "1001",
+    "subject": "CHM",
+    "catalogNumber": "116",
+    "schedulePrint": true,
+    "description": "General Chemistry II",
+    "classStatusCode": "A",
+    "classStatusDescription": "Active",
+    "startDate": 1673247600000,
+    "endDate": 1682665200000,
+    "locationCode": "TEMPE",
+    "locationDescription": "Tempe",
+    "campusCode": "TEMPE",
+    "courseComponent": "LEC",
+    "courseComponentDescription": "Lecture",
+    "gradedComponent": true,
+    "associatedClass": 1001,
+    "instructorEdit": "N",
+    "courseTopicTitle": null,
+    "promodShell": false,
+    "classNotes": ["0325"],
+    "meetings": [
+      {
+        "meetingNumber": 1,
+        "instructors": [
+          {
+            "emplid": "1200654321",
+            "schedulePrint": true,
+            "instructorRole": "PI",
+            "assignSequence": 1,
+            "firstName": "Ashli",
+            "lastName": "Morgan",
+            "asuriteid": "asuritehere",
+            "iSearchUrl": "https://isearch.asu.edu/profile/1723163"
+          }
+        ],
+        "startDate": 1673247600000,
+        "endDate": 1682665200000,
+        "startTime": 65700000,
+        "endTime": 68700000,
+        "meetDays": ["MONDAY", "WEDNESDAY", "FRIDAY"],
+        "facilityId": "LSA191",
+        "facilityLocationCode": "TEMPE",
+        "facilityRoom": "191",
+        "facilityDescription": "Life Sciences A 191 (Tempe)",
+        "buildingCode": "LSA",
+        "buildingDescription": "Life Science A-Wing",
+        "buildingCountry": "USA",
+        "buildingAddress1": null,
+        "buildingAddress2": null,
+        "buildingAddress3": null,
+        "buildingAddress4": null,
+        "buildingCity": null,
+        "buildingState": null,
+        "buildingPostal": null,
+        "buildingCampus": "TEMPE"
+      }
+    ]
+  }
+}

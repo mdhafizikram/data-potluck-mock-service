@@ -1,0 +1,29 @@
+{
+  "realm": "asuriteid",
+  "principal": "myasuplat_dpl_app",
+  "timestamp": 1586898532955,
+  "principalType": "application",
+  "uid": "1976075",
+  "status": {
+    "active": true
+  },
+  "owner": {
+    "emplid": "1000422805",
+    "timestamp": 1563886008851,
+    "primaryAsuriteid": "jsharper",
+    "campusId": "993904776",
+    "names": {
+      "PRI": {
+        "nameType": "PRI",
+        "givenName": "Jason",
+        "middleName": "Scott",
+        "familyName": "Harper",
+        "namePrefix": null,
+        "nameSuffix": null
+      }
+    },
+    "gender": "M"
+  },
+  "sponsors": [],
+  "electronicIdentityKey": "3694200"
+}
