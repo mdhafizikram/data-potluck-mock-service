@@ -1,0 +1,13 @@
+{
+  "id": 1,
+  "title": "Introduction to Programming",
+  "instructor": "John Smith",
+  "duration": 60,
+  "price": 99.99,
+  "description": "This course provides an introduction to programming concepts and techniques.",
+  "enrollment": {
+    "current": 50,
+    "capacity": 100
+  },
+  "tags": ["programming", "beginner", "coding"]
+}

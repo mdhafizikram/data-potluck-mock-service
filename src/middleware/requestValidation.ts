@@ -6,13 +6,16 @@ import { StatusCodes } from 'http-status-codes';
 export function validateData(schema: z.ZodObject<any, any>) {
   return (req: Request, res: Response, next: NextFunction) => {
     try {
-      console.log("params",req.params)
-     
-      schema.parse(req.params);
+      // TODO: Add body when any payload
+      const allParams = {
+        ...req.params,
+        ...req.query,
+      };
+      schema.parse(allParams);
+
       next();
     } catch (error) {
       if (error instanceof ZodError) {
-     
         const errorMessages = error.errors.map((issue: any) => ({
           message: `${issue.path.join('.')} is ${issue.message}`,
         }));
