@@ -1,0 +1,16 @@
+{
+  "emplid": "E67890",
+  "addressTypeCode": "HOME",
+  "addressTypeDescription": "Home Address",
+  "addressTypeOrderBySequence": 1,
+  "addressLine1": "456 Elm St",
+  "addressLine2": "Apt 101",
+  "addressLine3": "",
+  "addressLine4": "",
+  "city": "Smalltown",
+  "stateCode": "CA",
+  "stateDescription": "California",
+  "postalCode": "54321",
+  "countryCode": "US",
+  "countryDescription": "United States"
+}

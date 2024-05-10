@@ -23,6 +23,18 @@ import {
   codesetCreditCodeSchema,
   codesetCountriesSchema,
   codesetCountrySchema,
+  codesetestComponeTntCodeSchema,
+  codesetTestDateSchema,
+  codesetTestScoreSchema,
+  codesetExtOrganizationsSchema,
+  codesetExtOrganByOrgIdSchema,
+ 
+  codesetCareerDataByCodeSchema,
+  codesetVisaPermitTypesSchema,
+  codesetTermsSchema,
+  codesetTermSchema,
+  codesetCurrentTermSchema
+  
 } from '../schemas/codeset';
 import {
   privateMockSchema,
@@ -33,6 +45,15 @@ import {
   privatePrincipalSchema,
   privatePrincipalOwnerSchema,
   privateServiceSchema,
+  privateJobsSchema,
+  privateMailAdressSchema,
+  privateAsuSyncClass,
+  privatePhoneSchema,
+  privateStudentGroupSchema,
+  privateZoomUserSchema,
+  privatePsUserRoleSchema
+  
+  
 } from '../schemas/authenticated';
 
 const router: Router = express.Router();
@@ -169,6 +190,21 @@ router.get(
   dplService
 );
 
+
+
+router.get(
+  '/api/codeset/credit-by-exam/{testCode}/{testComponentCode}',
+  validateData(codesetestComponeTntCodeSchema), dplService
+);
+router.get(
+  '/api/codeset/credit-by-exam/{testCode}/{testComponentCode}/{testDate}',
+  validateData(codesetTestDateSchema), dplService
+);
+router.get(
+  '/api/codeset/credit-by-exam/{testCode}/{testComponentCode}/{testDate}/{testScore}',
+  validateData(codesetTestScoreSchema), dplService
+);
+
 /**
  * Get countries codeset information
  */
@@ -186,7 +222,23 @@ router.get(
   validateData(codesetCountrySchema),
   dplService
 );
-
+router.get(
+  '/api/codeset/ethnicities', dplService
+);
+router.get(
+  '/api/codeset/external-organizations/usa-states-cities', validateData(codesetExtOrganizationsSchema), dplService
+);
+router.get(
+  '/api/codeset/external-organization/{externalOrgId}',validateData(codesetExtOrganByOrgIdSchema), dplService
+);
+router.get('/api/codeset/onet-career-data', dplService);
+router.get('/api/codeset/onet-career-data/{onetCode}',validateData(codesetCareerDataByCodeSchema), dplService);
+router.get('/api/codeset/student-groups', dplService);
+router.get('api/codeset/undergraduate-admissions-corporate-partners', dplService);
+router.get('/api/codeset/visa-permit-types',validateData(codesetVisaPermitTypesSchema), dplService);
+router.get('/api/codeset/terms',validateData(codesetTermsSchema), dplService);
+router.get('/api/codeset/term/{strm}',validateData(codesetTermSchema), dplService);
+router.get('/api/codeset/term/current',validateData(codesetCurrentTermSchema), dplService);
 /**
  * @description Routes for private endpoints
  */
@@ -250,7 +302,13 @@ router.get(
   validateData(privateServiceSchema),
   mockService
 );
-
+router.get('/api/jobs/employee/emplid/{emplid}', validateData(privateJobsSchema), mockService);
+router.get('/api/mailing-address/emplid/{emplid}"', validateData(privateMailAdressSchema), mockService);
+router.get('/api/asusync-class-override/{strm}/{classNumber}', validateData(privateAsuSyncClass), mockService);
+router.get('/api/phone/emplid/{emplid}',validateData(privatePhoneSchema), mockService);
+router.get('/api/student-group-membership/student-group/{studentGroupCode}',validateData(privateStudentGroupSchema), mockService);
+router.get('/api/zoom-user/emplid/{emplid}',validateData(privateZoomUserSchema), mockService);
+router.get('/api/ps-user-role-membership/oprid/{oprid}',validateData(privatePsUserRoleSchema), mockService);
 /**
  * Get private information
  */

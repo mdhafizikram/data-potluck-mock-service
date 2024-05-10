@@ -1,0 +1,45 @@
+{
+  "emplid": "E12345",
+  "employmentRecordNumber": "ER56789",
+  "jobIndicatorCode": "J001",
+  "employeeStatusCode": "A",
+  "employeeStatusDescription": "Active",
+  "title": "Software Engineer",
+  "departmentId": "D001",
+  "departmentDescription": "Engineering Department",
+  "locationCode": "L001",
+  "locationDescription": "Headquarters",
+  "fte": 1.0,
+  "employeeClassificationCode": "EC001",
+  "employeeClassificationDescription": "Full-time Employee",
+  "treeLevelNumber": 2,
+  "parentDepartment": {
+    "departmentId": "D002",
+    "departmentDescription": "Software Development",
+    "locationCode": "L001",
+    "locationDescription": "Headquarters",
+    "treeLevelNumber": 1,
+    "parentDepartment": {
+      "departmentId": "D000",
+      "departmentDescription": "Company",
+      "locationCode": "L001",
+      "locationDescription": "Headquarters",
+      "treeLevelNumber": 0,
+      "parentDepartment": null
+    }
+  },
+  "person": {
+    "personId": "P123",
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johndoe@example.com",
+    "phone": "+1-234-567-8901",
+    "address": {
+      "street": "123 Main St",
+      "city": "Anytown",
+      "state": "CA",
+      "postalCode": "12345",
+      "country": "USA"
+    }
+  }
+}

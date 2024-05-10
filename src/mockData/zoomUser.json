@@ -1,0 +1,12 @@
+{
+  "emplid": "E13579",
+  "id": "ZU98765",
+  "personalMeetingId": "PMID123",
+  "personalMeetingUrl": "https://zoom.us/j/1234567890",
+  "profilePictureUrl": "https://example.com/profile.jpg",
+  "createdAt": "2023-05-15T10:30:00Z",
+  "lastLoginTime": "2024-04-01T08:45:00Z",
+  "status": "Active",
+  "accountId": "AC987654",
+  "email": "john.doe@example.com"
+}

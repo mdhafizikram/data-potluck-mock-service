@@ -20,7 +20,7 @@ export const privateReportSchema = z.object({
  */
 export const privateEnrollmentSchema = z.object({
   strm: z.string(),
-  classNumber: z.string(),
+  classNumber: z.number(),
 });
 
 /**
@@ -59,6 +59,40 @@ export const privateServiceSchema = z.object({
   asuriteid: z.string(),
   filter: z.string().optional(),
 });
+
+/**
+ * Schema for private jobs list
+ */
+export const privateJobsSchema = z.object({
+  emplid : z.string(),
+  include: z.string().optional()
+
+});
+
+/**
+ * Schema for mailing address 
+ */
+ export const privateMailAdressSchema = z.object({
+  emplid : z.string()
+ });
+ export const privateAsuSyncClass = z.object({
+  strm : z.string(),
+  classNumber: z.number()
+ });
+ export const privatePhoneSchema = z.object({
+  emplid : z.string()
+ });
+export const privateStudentGroupSchema = z.object({
+  studentGroupCode : z.string()
+
+});
+export const privateZoomUserSchema = z.object({
+  emplid : z.string()
+});
+export const privatePsUserRoleSchema = z.object({
+  oprid: z.string()
+
+})
 
 /**
  * Schema for academic plan
