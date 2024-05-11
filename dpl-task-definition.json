@@ -1,9 +1,9 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:450746718557:task-definition/dpl-task-definition:1",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:450746718557:task-definition/dpl-task-definition:2",
   "containerDefinitions": [
     {
       "name": "dpl-mock-service",
-      "image": "public.ecr.aws/i4s8i4g6/dpl-mock-service",
+      "image": "/dpl-mock-service:3b12d9b72548093cda4cd4c501454e2759f70e63",
       "cpu": 0,
       "portMappings": [
         {
@@ -16,10 +16,8 @@
       ],
       "essential": true,
       "environment": [],
-      "environmentFiles": [],
       "mountPoints": [],
       "volumesFrom": [],
-      "ulimits": [],
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
@@ -27,8 +25,7 @@
           "awslogs-group": "/ecs/dpl-task-definition",
           "awslogs-region": "us-east-1",
           "awslogs-stream-prefix": "ecs"
-        },
-        "secretOptions": []
+        }
       },
       "systemControls": []
     }
@@ -37,7 +34,7 @@
   "taskRoleArn": "arn:aws:iam::450746718557:role/ECS_ADMIN_ROLE",
   "executionRoleArn": "arn:aws:iam::450746718557:role/ECS_ADMIN_ROLE",
   "networkMode": "awsvpc",
-  "revision": 1,
+  "revision": 2,
   "volumes": [],
   "status": "ACTIVE",
   "requiresAttributes": [
@@ -72,7 +69,7 @@
     "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"
   },
-  "registeredAt": "2024-05-11T11:36:43.667Z",
+  "registeredAt": "2024-05-11T12:44:13.272Z",
   "registeredBy": "arn:aws:iam::450746718557:root",
   "tags": []
 }
