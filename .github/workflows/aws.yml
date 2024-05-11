@@ -33,19 +33,20 @@ jobs:
         run: |
           docker build -t $REGISTRY/$REGISTRY_ALIAS/$REPOSITORY:$IMAGE_TAG .
           docker push $REGISTRY/$REGISTRY_ALIAS/$REPOSITORY:$IMAGE_TAG
-          echo "image=$ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
+          echo "image=$REGISTRY/$REGISTRY_ALIAS/$REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
 
       - name: Fill in the new image ID in the Amazon ECS task definition
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
           task-definition: dpl-task-definition.json
-          container-name: dpl-mock-service
+          container-name: dpl-mock-container
           image: ${{ steps.build-image.outputs.image }}
+
       - name: Deploy Amazon ECS task definition
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           service: dpl-ecs-service
-          cluster: DevClusterDPL2
+          cluster: DevClusterDPL
           wait-for-service-stability: true
