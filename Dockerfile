@@ -18,5 +18,7 @@ COPY . .
 # Build the application
 RUN pnpm build
 
+EXPOSE 5000
+
 # Start the application
 CMD [ "pnpm", "start" ]

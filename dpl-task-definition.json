@@ -1,9 +1,9 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:450746718557:task-definition/dpl-task-definition:2",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:450746718557:task-definition/dpl-task-definition:5",
   "containerDefinitions": [
     {
       "name": "dpl-mock-service",
-      "image": "/dpl-mock-service:3b12d9b72548093cda4cd4c501454e2759f70e63",
+      "image": "/dpl-mock-service:0217446043f79f8ea672c78feceb9aa56eb5d4ce",
       "cpu": 0,
       "portMappings": [
         {
@@ -25,16 +25,17 @@
           "awslogs-group": "/ecs/dpl-task-definition",
           "awslogs-region": "us-east-1",
           "awslogs-stream-prefix": "ecs"
-        }
+        },
+        "secretOptions": []
       },
       "systemControls": []
     }
   ],
   "family": "dpl-task-definition",
-  "taskRoleArn": "arn:aws:iam::450746718557:role/ECS_ADMIN_ROLE",
-  "executionRoleArn": "arn:aws:iam::450746718557:role/ECS_ADMIN_ROLE",
+  "taskRoleArn": "arn:aws:iam::450746718557:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::450746718557:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
-  "revision": 2,
+  "revision": 5,
   "volumes": [],
   "status": "ACTIVE",
   "requiresAttributes": [
@@ -46,6 +47,9 @@
     },
     {
       "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+    },
+    {
+      "name": "ecs.capability.execution-role-ecr-pull"
     },
     {
       "name": "com.amazonaws.ecs.capability.task-iam-role"
@@ -69,7 +73,7 @@
     "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"
   },
-  "registeredAt": "2024-05-11T12:44:13.272Z",
+  "registeredAt": "2024-05-11T15:53:29.796Z",
   "registeredBy": "arn:aws:iam::450746718557:root",
   "tags": []
 }
