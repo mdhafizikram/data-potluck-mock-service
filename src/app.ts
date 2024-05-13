@@ -17,6 +17,8 @@ app.use('/', routesv1);
 
 // Health check endpoint
 app.get('/health', (_, res: Response) => {
+  console.log('Health check endpoint hit');
+
   res.send('Express + TypeScript Server');
 });
 
