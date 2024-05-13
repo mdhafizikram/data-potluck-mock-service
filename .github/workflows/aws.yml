@@ -1,4 +1,4 @@
-name: CICD
+name: DEPLOY-ECS-FARGATE
 
 on:
   push:
@@ -27,8 +27,8 @@ jobs:
         id: build-image
         env:
           REGISTRY: ${{ steps.login-ecr-public.outputs.registry }}
-          REGISTRY_ALIAS: i4s8i4g6
-          REPOSITORY: dpl-mock-service
+          REGISTRY_ALIAS: ${{ secrets.AWS_ECR_REG_ALIAS }}
+          REPOSITORY: ${{ secrets.AWS_ECR_PUB_REPO }}
           IMAGE_TAG: ${{ github.sha }}
         run: |
           docker build -t $REGISTRY/$REGISTRY_ALIAS/$REPOSITORY:$IMAGE_TAG .
@@ -47,6 +47,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: dpl-ecs-service
-          cluster: DevClusterDPL
+          service: ${{ secrets.AWS_ECS_SERVICE_NAME }}
+          cluster: ${{ secrets.AWS_ECS_CLUSTER_NAME }}
           wait-for-service-stability: true

@@ -12,12 +12,20 @@ app.use(express.urlencoded({ extended: true }));
 app.use(helmet());
 app.use(compression());
 
+app.use((req, res, next) => {
+  const startTime = new Date().getTime();
+  console.log(
+    `[${req.method}] - ${req.url} | Time: ${startTime} | ip: ${req.ip}`
+  );
+  next();
+});
+
 // Routes
 app.use('/', routesv1);
 
 // Health check endpoint
 app.get('/health', (_, res: Response) => {
-  console.log('Health check endpoint hit');
+  console.log('Health check endpoint hit - Success');
 
   res.send('Express + TypeScript Server');
 });
