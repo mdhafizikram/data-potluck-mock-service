@@ -57,7 +57,7 @@ import {
 } from '../schemas/authenticated';
 
 const router: Router = express.Router();
-
+ 
 /**
  * @description Routes for getting course information
  */
